@@ -1,0 +1,2043 @@
+/* Colors */
+
+:root {
+    --main-color: #6416E4;
+    --rusty: #E79D77;
+    --grey: #777777;
+    --moon: #00ffea;
+}
+
+::selection {
+    background-color: var(--rusty);
+    color: #fff;
+  }
+  ::-moz-selection {
+    background-color: var(--rusty);
+    color: #fff;
+  }
+
+ html,body {
+     overflow-x: hidden;
+     background-color: #FAFAFA;
+ }
+ 
+ nav.global {
+     position: fixed;
+     background-color: #131317;
+     height: 80px;
+     margin-top: 0;
+     transform: translateY(-100%);
+     transition: .36s ease;
+ }
+
+ nav.global .right-nav {
+     /* margin-right: 70px; */
+     margin-right: 40px;
+     align-items: center;
+ }
+
+ nav.global img {
+     width: 150px;
+     height: 49px;
+     align-self: center;
+ }
+
+ .after nav.global {
+     transform: translateY(0);
+ }
+  
+
+
+/* Fonts */
+
+h1 {
+    font-family: 'Jost';
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h2, h3, h4, p, a, select, button {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h3 {
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+h4 {
+    font-family: 'Jost';
+    font-weight: 300;
+}
+
+h5 {
+    font-family: 'Jost';
+    font-weight: 300;
+    background-color: #131317;
+    color:#FAFAFA;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+p {
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+a {
+    cursor: pointer;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    color:#FAFAFA;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+a, select {
+    font-weight: bold;
+}
+
+button {
+    font-family: 'Open Sans';
+    outline: none;
+    padding: unset;
+}
+
+
+html,body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #131317;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    font-size: 14px;
+    letter-spacing: 2.94px;
+}
+
+button,
+.navBtn {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+}
+
+p {
+    color: #DDDDDD;
+    line-height: 2.85vh;
+    margin: 0;
+}
+
+a, button {
+    z-index: 3;
+    cursor: pointer;
+}
+
+Button:focus {
+    outline: none;
+}
+
+
+section {
+    background-color: #FAFAFA;
+    z-index: 3;
+}
+
+header {
+    color: white;
+    position: relative;
+}
+
+
+
+/* Global */
+
+::-webkit-scrollbar {
+    background: #131317;
+    width: 4px;
+}
+  
+::-webkit-scrollbar-thumb {
+      background: var(--grey);
+}
+
+.light {
+    font-weight: 600;
+}
+
+.dark {
+    font-weight: 500;
+}
+
+header {
+    height: 100vh;
+}
+
+header,
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section {
+    position: relative;
+    align-items: center;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons button,
+.offer button {
+    transition: .34s ease;
+}
+
+
+
+header button,
+section button,
+.navBtn {
+    background: transparent;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    border-radius: 30px;
+}
+
+nav a,
+footer .wrapper a {
+    transition: .36s ease;
+}
+
+footer .wrapper a {
+    font-weight: 300;
+}
+
+nav a:hover,
+footer .wrapper a:hover {
+    color: var(--rusty);
+}
+
+
+footer a.store {
+    display: flex;
+}
+
+footer a.store i {
+    margin-right: 12px;
+}
+
+.burger {
+    position: fixed;
+    display: flex;
+    height: 15px;
+    width: 25px;
+    border: none;
+    flex-direction: column;   
+    justify-content: center;
+    background-color: transparent;
+    top: 3.5%;
+    left: 2%;
+    z-index: 10;
+    transition: .36s ease;
+}
+
+.burger span {
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: var(--rusty);
+}
+
+.store-icon {
+    position: fixed;
+    right: 1%;
+    top: 2.75%;
+    z-index: 10;
+}
+
+
+.side-socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    top: 42.5vh;
+    z-index: 10;
+    transition: .74s ease;
+}
+
+.side-socials > * {
+    margin: 10px 0;
+}
+
+.buttonbox {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    align-self: center;
+}
+
+.more {
+    display: block;
+    width: fit-content;
+    align-self: center;
+    border: 1px solid;
+}
+
+.more.rust-btn {
+    border-color: var(--rusty);
+}
+
+.more.rust-btn.full {
+    background-color: rgba(231, 157, 119, 1);
+    color: #FAFAFA;
+}
+
+
+@keyframes pulseSvg {
+    50% {
+        stroke: rgba(231, 157, 119, .52)
+    }
+}
+
+@-webkit-keyframes pulseSvg {
+    50% {
+        stroke:rgba(231, 157, 119, .52)
+    }
+}
+
+.socials a svg path,
+.socials a svg rect,
+.socials a svg circle,
+.side-socials a svg path,
+.side-socials a svg rect,
+.side-socials a svg circle {
+    stroke: rgba(231, 157, 119, 1);
+}
+
+a:hover svg path:not(.up svg path),
+a:hover svg rect:not(.up svg rect),
+a:hover svg circle:not(.up svg circle),
+.close:hover svg path {
+    -webkit-animation-name: pulseSvg;
+    animation-name: pulseSvg;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+} 
+
+.more.rust-btn.full:hover{
+    background-color: #5f1cbd;
+    border-color: #5f1cbd;
+}
+
+.more.rust-btn.null {
+    background-color: transparent;
+    color: var(--rusty);
+}
+
+.more.rust-btn.null:hover {
+    background-color: #5f1cbd;
+    border-color: #5f1cbd;
+    color: #DDDDDD;
+    /* font-weight: 600; */
+}
+
+.black-side-bar {
+    height: 100%;
+    background-color: #131317;
+    position: absolute;
+    border-color: #707070;
+    left: 0;
+    top: 0;
+}
+
+section h2 {
+    font-family: "Jost";
+    text-transform: uppercase;
+    color: #131317;
+}
+
+section h4 {
+    font-family: "Jost";
+    font-weight: 300;
+    color: #777777;
+    text-transform: uppercase;
+    font-style: normal;
+    margin: 0;
+}
+
+section p {
+    color: #131317;
+    font-size: 16px;
+    letter-spacing: 1.12px;
+    line-height: 29px;
+}
+
+.section-logo {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 3%;
+    z-index: 1;
+    opacity: 0;
+    /* transition-delay: 1s; */
+}
+
+.section-logo.white {
+    transition: .36s ease;
+    transition-delay: .46s;
+}
+
+
+.center{
+    z-index: 2;
+    height: auto;;
+    display: flex;
+    justify-content: space-between;
+}
+
+.more {
+    transition: .74s ease;
+}
+
+.subtitle {
+    /* position: absolute; */
+    color: #777777;
+    font-family: 'Jost';
+}
+
+a svg path, a svg rect, a svg circle {
+    stroke: var(--rusty);
+}
+
+
+
+/* Header */
+
+header h3 {
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    color: #777777;
+}
+
+
+header .stars {
+    position: absolute;
+}
+
+
+header {
+    justify-content: space-between;
+}
+
+header h2 {
+    font-family: "Open Sans";
+    margin-top: 0;
+    position: relative;
+}
+
+header p {
+    letter-spacing: 3.24px;
+    color: var(--grey);
+}
+
+header p span {
+    color: white;
+}
+
+.top-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    z-index: 5;
+}
+
+.top-nav.global {
+    justify-content: center;
+}
+
+.top-nav a {
+    font-weight: 300;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.right-nav {
+    margin-right: 30px;
+}
+
+.global .left-nav,
+.global .right-nav {
+    margin: 0;
+}
+
+nav a {
+    margin: 16px 10px;
+}
+
+header .center {
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    /* margin-top: 13.5%; */
+    /* margin-left: 4.5%; */
+}
+
+header img {
+    align-self: center;
+    z-index: 1;
+    margin-top: 8px;
+}
+
+header main {
+    text-align: center;
+    padding-bottom: 27px;
+}
+
+header main p {
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+    bottom: 8px;
+}
+
+header .nav-link {
+    margin-top: 19.75vh;
+}
+
+header .null {
+    font-weight: 300;
+}
+
+header .more.rust-btn.null:hover {
+    color: #FAFAFA;
+}
+
+header .nav-link {
+    align-self: center;
+}
+
+.nav-area {
+    height: 80px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    bottom: .5%;
+    left: 0;
+}
+
+section .nav-area {
+    bottom: 7%;
+}
+
+
+/* Third */
+
+.last .front,
+.prices .front {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prices .front {
+    position: relative;
+}
+
+
+
+
+/* Footer */
+
+footer {
+    /* height: 39.625vh; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-image: url('assets/images/bg_02_stars.png');
+    background-color: #131317;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+footer h4 {
+    color: #777777;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: fit-content;
+}
+
+footer .wrapper a {
+    margin: 6px 0;
+    width: fit-content;
+}
+
+footer .wrapper .line {
+    height: 1px;
+    width: 17%;
+    background: #777777;
+    margin: auto 0;
+}
+
+footer .wrapper div:not(.socials, .bottom) {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+footer .socials {
+    margin-top: auto;
+    width: 30%;
+    justify-content: space-between;
+    display: flex;
+}
+
+footer .address {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1.12px;
+    color: #FAFAFA;
+    line-height: 35px;
+}
+
+footer .socials a:first-child {
+    order: 2
+}
+
+footer .socials a:nth-child(2) {
+    order: 3;
+}
+
+footer .bottom-line {
+    height: 1px;
+    background-color: #777777;
+    position: absolute;
+    bottom: 20%;
+}
+
+footer .bottom-line:first-of-type {
+    left: 0;
+}
+
+footer .bottom-line:last-of-type {
+    right: 0;
+}
+
+footer .bottom {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    align-items: center;
+}
+
+footer .bottom .up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+footer .bottom svg > * {
+    stroke: var(--rusty);
+}
+
+footer .bottom .line,
+footer .bottom .arrow {
+    position: absolute;
+}
+
+footer .bottom a svg {
+    transition: .74s ease;
+}
+
+footer .bottom a:hover .line,
+footer .bottom a:hover .arrow {
+    transform: translateY(-10px);
+}
+
+
+footer .bottom .arrow {
+    top: 18px;
+}
+
+footer .bottom p,
+footer .bottom a {
+    margin-bottom: 25px;
+    color: #FAFAFA;
+}
+
+footer .bottom p {
+    text-transform: uppercase;
+    letter-spacing: 1.12px;
+}
+
+footer .bottom a {
+    font-size: 16px;
+    letter-spacing: 1.12px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+footer .bottom a span {
+    color: var(--rusty);
+    text-transform: uppercase;
+}
+
+footer .bottom .up {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* About us */
+
+.about-us-header {
+    background-image: url('assets/images/about-header.png'), url('assets/images/bg_02_stars.png');
+    background-position: unset;
+}
+
+/* About */
+
+.about-us.first {
+    justify-content: flex-end
+}
+
+.about-us.first h2 {
+    font-family: "Jost";
+    font-weight: 600;
+}
+
+
+div.lines span {
+    height: 1px;
+    background-color: #131317;
+    width: 12.415625vw;
+}
+
+.about-us.first .center {
+    justify-self: flex-end;
+}
+
+.about-us.first .left {
+    position: relative;
+    z-index: 3;
+    background-size: contain;
+}
+
+
+.about-us.first .right {
+    position: relative;
+}
+
+/* .about-us.first .right span:not(.right .quotebox span) {
+    position: absolute;
+    top: 2.5%;
+    right: -33%;
+    height: 1px;
+    width: 33.056%;
+    background-color: #131317;
+} */
+
+.about-us.first .quotebox span {
+    width: 1px;
+    background-color: #131317;
+    position: absolute;
+    left: 0;
+    /* position: relative; */
+    top: 1px;
+}
+
+.about-us.first .quotebox {
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.about-us.first .quotebox p {
+    color: #777777;
+}
+
+.about-us.first .left p.about-us.first{
+    width: 65%;
+    margin-top: 5.4%;
+}
+
+.about-us.first .buttonbox {
+    margin-top: 4.5%;
+}
+
+.about-us.first .null {
+    font-weight: 400;
+}
+
+.about-us.first .more.rust-btn.null:hover {
+    color: #FAFAFA;
+}
+
+
+/* Second */
+
+
+.about-us.second .wrapper {
+    display: grid;
+}
+
+.about-us.second .wrapper .box {
+    cursor: pointer;
+}
+
+.about-us.second .wrapper .box div {
+    position: relative;
+}
+
+.about-us.second .wrapper .box:first-child div {
+    background-image: url('assets/images/about-us/luna.jpg');
+}
+
+.about-us.second .wrapper .box:nth-child(2) div {
+    background-image: url('assets/images/about-us/44.jpg');
+}
+
+.about-us.second .wrapper .box:nth-child(3) div {
+    background-image: url('assets/images/about-us/alatyra.jpg');
+}
+
+.about-us.second .wrapper .box:nth-child(4) div {
+    background-image: url('assets/images/about-us/kasiak.jpg');
+}
+
+.about-us.second .wrapper .box:nth-child(5) div {
+    background-image: url('assets/images/about-us/aza.jpg');
+}
+
+.about-us.second .wrapper h3 {
+    position: absolute;
+    background-color: #131317; 
+    font-family: 'Jost';
+    color: #FAFAFA;
+}
+
+.about-us.second .wrapper .box:last-child {
+    position: relative;
+}
+
+.about-us.second .wrapper .box:last-child img {
+    position: absolute;
+    transition: .36s ease;
+}
+
+.about-us.second .wrapper .box:last-child:hover img {
+    transform: translateX(50%);
+}
+
+
+.about-us.second h3 {
+    text-transform: uppercase;
+}
+
+
+
+.about-us.third .front span,
+.prices .front span {
+    height: 1px;
+    background-color: #777777;
+}
+
+
+/* Tattoo */
+
+section .line {
+    width: 61.927083333333336vw;
+    height: 1px;
+    background: #131317;
+}
+
+/* Header */
+
+.tattoo-header {
+    background-image: url('assets/images/header_tatuaz_bg.jpg');
+}
+
+.piercing-header {
+    background-image: url('assets/images/header_piercing_bg.jpg');
+    background-position: unset;
+}
+
+.tattoo.first .right {
+    background-image: url('assets/images/tattoo/img-tattoo.png');
+    background-position: bottom;
+}
+
+.classes-header {
+    background-image: url('assets/images/header_warsztaty_bg.jpg');
+}
+
+.contact-header {
+    background-image: url('assets/images/header_kontakt_bg.jpg');
+}
+
+.last .left {
+    background: url('assets/images/bg_02_stars.png'), url('assets/images/footer.png'), #131317;
+    background-position: center center;
+    background-attachment: fixed, local;
+    background-size: cover;
+}
+
+.piercing.first .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.piercing.first .right > * {
+    width: 100%;
+}
+
+.laser.first .right {
+    background-image: url('assets/images/laser/first.png');
+    background-position: bottom;
+}
+
+.classes.first .right {
+    background-image: url('assets/images/classes/first.png');
+    background-position: bottom;
+}
+
+.classes.second .left {
+    background-image: url('assets/images/classes/second.png');
+    background-position: right;
+}
+
+.classes.second a {
+    align-self: center;
+}
+
+/*  GALLERY  */
+
+.no-select path {
+    stroke: var(--rusty);
+}
+
+.gallery img {
+    opacity: 0.1;
+    will-change: opacity;
+    transition: all 0.3s;
+    transform: translateY(50px);
+}
+
+.gallery img.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.tattoo.second .gallery button:first-child {
+    color: #131317;
+}
+
+.tattoo.second .gallery button:nth-child(2),
+.tattoo.second .gallery button:nth-child(3),
+.tattoo.second .gallery button:nth-child(4) {
+    color: var(--rusty);
+}
+
+.tattoo.second .gallery button {
+    position: relative;
+}
+
+.tattoo.second .gallery button::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    height: 1px;
+    width: 0;
+    transition: .74s ease;
+    background: var(--rusty);
+}
+
+.tattoo.second .gallery button:hover::after {
+    width: 97%;
+}
+
+
+.temporary > * {
+    font-family: 'Jost';
+    line-height: 37px;
+    font-size: 18px;
+    letter-spacing: 3.24px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.tattoo.second .gallery .temporary a {
+    color: var(--rusty);
+    margin-left: 5px;
+    position: relative;
+}
+
+.temporary a::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: var(--rusty);
+    transition: .36s ease;
+    bottom: 0;
+    left: 0;
+}
+
+.temporary a:hover::after {
+    width: 99%;
+}
+
+.photos a{
+    transition: all 0.5s ease;
+    margin: 20px 40px 20px 0;
+    overflow: hidden;
+    /* height: 580px; */
+    height: 59.85552115583075vh;
+    /* width: 436px; */
+    width: 22.708333333333332vw;
+    display: flex;
+    justify-content: center;
+}
+
+.photos a img {
+    width: 120%;
+    height: auto;
+    align-self: center;
+}
+
+.photos a img.bigger {
+    width: 163%;
+}
+
+.photos a.active {
+    top: 0px;
+    left: 0px;
+    visibility: visible;
+    will-change: transform;
+    opacity: 1;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform, opacity;
+    transform: translate(0px, 0px) scale(1);
+}
+
+.photos a.delete {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    will-change: transform;
+    opacity: 0;
+    transform: translate(388px, 0px) scale(0.001);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform, opacity;
+}
+
+
+.focus {
+    overflow: hidden;
+}
+
+.focus .side-socials {
+    z-index: -1;
+    opacity: .5;
+    transition: .36s;
+}
+
+.focus .tattoo.second,
+.focus .piercing.second {
+    z-index: 4;
+}
+
+
+/* Lightbox */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    /* padding: 50px 0; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #131317;
+ }
+
+
+    .modal.no-select {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+
+
+    .modal-content {
+      margin: auto;
+      width: 50%;
+      overflow: hidden;
+     }
+
+
+      @media only screen and (max-width: 37.5em) {
+        .modal-content {
+          width: 90%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); } 
+    }
+
+
+  
+  @keyframes anime {
+    0% {
+      opacity: 0;
+      transform: scale(0.9); }
+    100% {
+      opacity: 1;
+      transform: scale(1); } 
+    
+    }
+
+
+    .modal-content {
+        justify-content: center;
+    }
+
+  
+  .my-slides {
+    display: none;
+    height: 100vh;
+    transition: all 2s;
+    overflow: hidden;
+    animation: anime 0.36s ease-in; 
+    /* position: relative; */
+    align-items: center;
+    place-content: center;
+  }
+
+
+  .column-box {
+    position: absolute;
+    bottom: -32%;
+    /* display: flex; */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden;
+    opacity: 0.5;
+    transition: .36s ease;
+    display: none;
+  }
+
+
+  /* Laser */
+
+  .laser-header {
+      background-image: url('assets/images/header_laser_bg.jpg'), url('assets/images//laser/net.png');
+      background-size: unset cover;
+  }
+
+  .laser.second .left {
+      background-image: url('assets/images/laser/second.png');
+  }
+
+  .laser.second .center {
+      justify-content: unset;
+  }
+
+  .laser.third .right {
+    background-image: url('assets/images/laser/fraxel.png');
+  }
+
+  .laser.fourth .lines {
+      position: absolute;
+  }
+
+  .laser .videobox {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+
+  .laser .videobox video {
+    width: 160vw;
+    height: auto;
+    position: absolute;
+    bottom: -70%;
+  }
+
+  .store-icon,
+footer a.store {
+    display: none;
+}
+
+
+    @media only screen and (max-width: 56.25em) {
+
+      .my-slides {
+        height: 70vh;
+     }
+    
+    
+    }
+    @media only screen and (max-width: 37.5em) {
+
+      .my-slides {
+        height: 30vh;
+      }
+
+
+    }
+    .my-slides img {
+        object-fit: cover;
+        z-index: 10;
+    }
+
+
+    .my-slides--number {
+      color: #f2f2f2;
+      font-size: 16px;
+      padding: 8px 12px;
+      position: absolute;
+      font-family: 'Open Sans';
+      top: 2.5%;
+      left: 5%;
+      z-index: 11;
+    }
+
+
+  
+  .demo {
+    opacity: 0.5;
+    transition: all 0.4s;
+ }
+
+
+    .demo.active, .demo:hover {
+      opacity: 1;
+     }
+
+
+  
+  /* Caption text */
+
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 6px 16px;
+    color: white;
+ }
+
+
+  
+  /* The Close Button */
+
+  .close {
+    color: white;
+    position: absolute;
+    top: 2.5%;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+    .close:hover, .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+     }
+  
+  /* Next & previous buttons */
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    transform: translateY(-50%);
+}
+
+
+    @media only screen and (max-width: 37.5em) {
+      .prev,
+      .next {
+        position: fixed;
+        top: 95%;
+        padding: 10px;
+        font-size: 40px;
+        transform: translateY(-50%);
+     }
+    }
+
+
+    .prev:active,
+    .next:active {
+      font-size: 30px;
+     }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+ }
+  
+  .prev {
+    left: 0;
+ }
+
+
+    @media only screen and (max-width: 37.5em) {
+      .prev {
+        left: 80%; }
+     }
+
+
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+ }
+
+
+    @media only screen and (max-width: 37.5em) {
+      .prev:hover,
+      .next:hover {
+        background-color: transparent; }
+     }
+
+/* Mozilla */
+
+@supports (-moz-appearance:none) {
+
+    .piercing-header {
+        background-size: auto;
+    }
+
+
+    footer .wrapper .line {
+        margin: 3% 0 3.25%;
+    }
+
+    footer .wrapper .socials {
+        margin-top: 2.75%;
+    }
+
+    .buttonbox {
+        width: max-content;
+    }
+
+    nav a.logo-link {
+        margin: 16px 10px;
+    }
+
+    html {
+        scrollbar-width: thin !important;
+    }
+
+    .top-nav.global .wrapper .logo-link {
+        width: max-content;
+    }
+
+    
+}
+
+/* Contact-us */
+
+.page .contact-socials a {
+    display: flex;
+}
+
+.page .contact-socials a {
+    text-transform: unset;
+}
+
+.page .contact-socials a p {
+    margin-left: 18px;
+}
+
+.page .contact-us.last .right {
+    align-items: unset;
+}
+
+.page .contact-us.last .wrapper {
+    width: auto;
+}
+
+@keyframes TopNavDisappear {
+    from {
+        z-index: 5;
+    }
+
+    to {
+        z-index: -1;
+    }
+}
+
+.focus .top-nav.global {
+    opacity: 0;
+    animation: TopNavDisappear .1s forwards;
+    animation-delay: .5s;
+}
+
+.focus .page .burger {
+    opacity: 0;
+}
+
+/* Prices */
+
+
+.prices.first .piercingbox {
+    background-color: #131317;
+    display: flex;
+    align-items: center;
+    transition: .36s ease;
+    border-bottom: 1px solid #131317;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.prices.first .piercingbox:hover {
+    background-color: #FAFAFA;
+}
+
+.prices.first .piercingbox div:first-child {
+    position: absolute;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: .36s ease;
+}
+
+.prices.first .piercingbox div:last-child {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-self: flex-end;
+    z-index: 2;
+}
+
+.prices.first .piercingbox p {
+    color: #FAFAFA;
+    background-color: #131317;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: .36s ease;
+}
+
+.piercingbox:hover div:first-child {
+    transform: translateY(-10px);
+}
+
+.piercingbox a {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.piercingbox:hover a {
+    opacity: 1;
+}
+
+
+.prices.first .piercingbox:hover p:last-child {
+    color: #131317;
+    background-color: #FAFAFA;
+}
+
+.prices.second h5 {
+    background: none;
+    color: #777777;
+    position: unset;
+    padding: 0;
+}
+
+/* Prices BGs */
+
+    /* Prices Piercing */
+
+    .prices.first .wrapper .piercingbox .bgbox {
+        background-repeat: no-repeat;
+        background-size: 75%;
+        background-position: center;
+        /* position: relative; */
+    }
+
+    .prices.first .wrapper .piercingbox .bgbox {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(1) .bgbox  {
+        background-image: url('assets/images/prices/01_piercing_podstawowy.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(2) .bgbox {
+        background-image: url('assets/images/prices/02_piercing_helix.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(3) .bgbox  {
+        background-image: url('assets/images/prices/03_piercing_tragus.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(4) .bgbox  {
+        background-image: url('assets/images/prices/03-2_piercing_anti-tragus.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(5) .bgbox {
+        background-image: url('assets/images/prices/04_piercing_conch.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(6) .bgbox{
+        background-image: url('assets/images/prices/05_piercing_flat.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(7) .bgbox {
+        background-image: url('assets/images/prices/06_piercing_forward-helix.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(8) .bgbox {
+        background-image: url('assets/images/prices/07_piercing_daith.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(9) .bgbox {
+        background-image: url('assets/images/prices/08_piercing_orbital.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(10) .bgbox{
+        background-image: url('assets/images/prices/09_piercing_industrial.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(11) .bgbox{
+        background-image: url('assets/images/prices/10_piercing_rook.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(12) .bgbox {
+        background-image: url('assets/images/prices/11_piercing_jezyk.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(13) .bgbox {
+        background-image: url('assets/images/prices/12_piercing_smiley.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(14) .bgbox {
+        background-image: url('assets/images/prices/13_piercing_septum.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(15) .bgbox  {
+        background-image: url('assets/images/prices/14_piercing_nostril.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(16) .bgbox  {
+        background-image: url('assets/images/prices/15_piercing_d-ring.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(17) .bgbox  {
+        background-image: url('assets/images/prices/16_piercing_bridge.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(18) .bgbox  {
+        background-image: url('assets/images/prices/17_piercing_brew.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(19) .bgbox {
+        background-image: url('assets/images/prices/18_piercing_policzki.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(20) .bgbox  {
+        background-image: url('assets/images/prices/19_piercing_pepek.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(21) .bgbox  {
+        background-image: url('assets/images/prices/20_piercing_sutki.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(22) .bgbox  {
+        background-image: url('assets/images/prices/21_piercing_microdermal.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(23) .bgbox {
+        background-image: url('assets/images/prices/22_piercing_christina.png');
+    }
+
+    .prices.first .wrapper .piercingbox:nth-child(24) .bgbox  {
+        background-image: url('assets/images/prices/23_piercing_konsultacje.png');
+    }
+
+
+
+@media only screen and (min-width: 1024px) {
+
+
+    .light {
+        background-image: url('assets/images/static_light_top.png');
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        /* z-index: -1; */
+    }
+
+
+    .about-us.first .quotebox span {
+        height: 4.010416666666667vw;
+    }
+
+    .about-us.first .quotebox {
+        padding-left: 30px;
+    }
+
+    .about-us.first .right {
+        background: url('assets/images/about-moon.png');
+        background-position: bottom;
+    }
+
+    .about-us.second .wrapper .box div {
+        width: 22.708333333333332vw;
+        height: 23.229166666666668vw;
+        border-top-left-radius: 6.25vw;
+        background-size: cover;
+    }
+
+    .about-us.second .wrapper .box {
+        width: min-content;
+    }
+
+    .about-us.second h5 {
+        padding: 0.25vw .47vw 0.275vw 0.8vw;;
+    }
+
+    .about-us.third .wrapper .photobox:first-child {
+        background-image: url('assets/images/offer2.png');
+    }
+    
+    .about-us.third .wrapper .photobox:nth-child(2) {
+        background-image: url('assets/images/offer3.png');
+    }
+    
+    .about-us.third .wrapper .photobox:nth-child(3) {
+        background-image: url('assets/images/offer1.png');
+    }
+    
+    .about-us.third .wrapper .photobox:last-child {
+        background-image: url('assets/images/offer4.png');
+    }
+
+    .about-us.third .buttonbox a:last-child {
+        margin-left: 15px;
+    }
+
+    .about-us.third .buttonbox button:last-child {
+        margin-left: 0
+    }
+
+    section .line {
+        align-self: flex-start;
+    }
+
+    section.classes span.line {
+        width: 12.415625vw;
+        margin-top: 5%;
+    }
+
+
+    .tattoo.second .gallery button::after {
+        bottom: -10%;
+    }
+
+    .tattoo.second .gallery .temporary {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    
+
+    footer .bottom .up {
+        bottom: -54%;
+    }
+
+    .modal-content {
+        margin: 50px auto;
+    }
+
+    /* Prices */
+
+    .prices.first {
+        padding-top: 5%;
+    }
+
+    .prices.first .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .prices.first .describes {
+        display: flex;
+    }
+
+    .prices.first .describes p:nth-child(2) {
+        text-align: center;
+    }
+
+    .prices.first .describes p:nth-child(3) {
+        text-align: right;
+    }
+
+    /* Prices Second */
+
+    .prices.second .wrapper {
+        display: flex;
+        width: 75%;
+        flex-direction: column;
+    }
+
+    .prices.second .wrapper div:not(.prices.second .wrapper div.mobile) {
+        display: flex;
+        /* justify-content: space-between; */
+    }
+
+    .pricesbox div {
+        margin-bottom: 7.25%;
+        justify-content: space-between;
+    }
+
+    .prices.second .titles {
+        justify-content: space-between;
+    }
+
+    .prices.second .titles h5:first-child {
+        margin-right: 15%;
+    }
+
+    .prices.second .items {
+        justify-content: space-between;
+    }
+
+    .prices.second .items div {
+        flex-direction: column;
+    }
+
+    .prices .describesbox {
+        width: 50%;
+    }
+
+    .prices.second .describesbox div {
+        margin-bottom: 0.78125vw;
+    }
+
+    .prices.second .describesbox div p:first-child,
+    .prices.second .pricesbox div p {
+        font-size: 1.25vw;
+        font-family: 'Jost';
+        line-height: 1.9270833333333333vw;
+        letter-spacing: 0.1375vw;
+    }
+
+    .prices.second .describesbox div p:nth-child(2) {
+        font-size: 0.8333333333333334vw;
+        letter-spacing: 0.05833333333333334vw;
+        line-height: 1.5104166666666667vw;
+    }
+
+    .prices.second .describesbox div p:last-child:not(.describesbox div:last-child p) {
+        font-size: 18px;
+        line-height: 29px;
+        letter-spacing: 3.24px;
+        color: #777777;
+    }
+
+    .prices.second .pricesbox {
+        width: 46.2%;
+    }
+
+    .prices.second .pricesbox div {
+        flex-direction: row;
+        position: relative;
+    }
+
+    .prices.second .pricesbox div:not(.pricesbox .titles):after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -70%;
+        left: 0;
+        background: #777777;
+    }
+
+    .prices.second div.end {
+        justify-content: flex-end;
+    }
+
+    .prices.second .buttonbox {
+        margin-top: 5%;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 1023px) {
+
+    header .light {
+        background-image: url('assets/images/mobilelight.png');
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        /* z-index: -1; */
+    }
+
+    .first .quotebox {
+        padding-left: 20px;
+        margin-bottom: 35px;
+    }
+
+    .first .quotebox p {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 2.7px;
+    }
+
+    .about-us.first .quotebox span {
+        height: 90px;
+        top: 5px;
+    }
+
+    .about-us.first .right {
+        background: url('assets/images/about-us/moon.png');
+        background-position: bottom;
+    }
+
+    p.text {
+        margin-top: 25px;
+    }
+
+    .about-us.second .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-us.second .wrapper .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us.second .wrapper .box div,
+    .prices.first .piercingbox {
+        width: 94.445%;
+        height: 100vw;
+        border-top-left-radius: 80px;
+        background-size: cover;
+    }
+
+    .about-us.third .wrapper .hoverbox {
+        overflow: hidden;
+    }
+
+    .about-us.third .wrapper .photobox:hover .hoverbox div {
+        transform: scale(1.1);
+    }
+
+
+    .about-us.third .wrapper .photobox:nth-child(3) .hoverbox div {
+        background-image: url('assets/images/about-us/1.png');
+    }
+    
+    .about-us.third .wrapper .photobox:nth-child(1) .hoverbox div {
+        background-image: url('assets/images/about-us/2.png');
+    }
+    
+    .about-us.third .wrapper .photobox:nth-child(2) .hoverbox div {
+        background-image: url('assets/images/about-us/3.png');
+    }
+    
+    .about-us.third .wrapper .photobox:last-child .hoverbox div {
+        background-image: url('assets/images/about-us/4.png');
+    }
+
+    .about-us.third .wrapper .photobox .hoverbox div {
+        z-index: -1;
+        transition: .74s ease;
+    }
+
+
+    /* Tattoo */
+
+    .tattoo.first .right {
+        background-image: url('assets/images/tattoo/img-tattoo.png');
+    }
+
+    section .line {
+        align-self: flex-start;
+        /* width: 87.38px; */
+    }
+
+    .tattoo.second .gallery button::after {
+        bottom: 0;
+    }
+
+    .last .front,
+    .prices.first .front {
+        padding-left: 30px;
+    }
+
+    .prices .line {
+        position: absolute;
+    }
+
+    .tattoo.last .line {
+        width: 52%;
+        position: absolute;
+        top: 1.5%;
+    }
+
+    .last .leftbox {
+        width: 97%;
+        height: 72.225vw;
+    }
+
+    .contact-us.second .map {
+        background-image: url('assets/images/contact/Clip.png');
+        width: 367px;
+        height: 520px;
+        position: relative;
+    }
+
+
+    .contact-us.second .map h5 {
+        position: absolute;
+        top: -7.25%;
+        left: 23%;
+        font-size: 14px;
+        text-transform: none;
+        line-height: 23px;
+        letter-spacing: .98px;
+        box-sizing: content-box;
+        width: 73.5%;
+        padding: 17.5px 11.8px;
+    }
+
+    .page .contact-us .quotebox {
+        display: none;
+    }
+
+    .piercingbox a {
+        display: none;
+    }
+    
+
+
+    footer {
+        flex-direction: column;
+        background-image: url(assets/images/mobilefooterstars.png), url(assets/images/mobilefooterstars2.png);
+        background-position: right top, left bottom;
+    }
+
+
+    footer .wrapper {
+        flex-direction: column;
+    }
+
+    footer .bottom {
+        position: unset;
+    }
+
+    footer a.up svg {
+        position: absolute;
+    }
+
+    .caption-container {
+        display: none;
+    }
+
+    .focus .logo-link {
+        opacity: 0;
+    }
+
+    .focus .top-nav {
+        opacity: 0;
+        animation: TopNavDisappear .1s forwards;
+        animation-delay: .5s;
+    }
+
+
+}
+
